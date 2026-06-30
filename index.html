@@ -543,6 +543,71 @@
       width: 48px;
     }
 
+    /* ─── Symphony Manors Gallery ─── */
+    .symphony {
+      padding: var(--space-2xl) 0;
+      background: var(--color-surface);
+    }
+
+    .symphony__header {
+      margin-bottom: var(--space-lg);
+    }
+
+    .symphony__header p:last-child {
+      color: var(--color-muted);
+      max-width: 56ch;
+      margin-top: var(--space-sm);
+      font-weight: 300;
+    }
+
+    .symphony__gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--space-xs);
+    }
+
+    .symphony__gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: brightness(0.92);
+      transition: filter var(--transition), transform var(--transition);
+    }
+
+    .symphony__gallery img:hover {
+      filter: brightness(1);
+      transform: scale(1.02);
+    }
+
+    .symphony__gallery img:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .symphony__gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .symphony__gallery img:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .symphony__gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .symphony__gallery img:first-child {
+        grid-column: span 2;
+      }
+    }
+
     /* ─── Properties ─── */
     .properties {
       padding: var(--space-2xl) 0;
@@ -1031,6 +1096,7 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav__links" id="navLinks">
+      <li><a href="#symphony">Symphony Manors</a></li>
       <li><a href="#properties">Properties</a></li>
       <li><a href="#walkthrough">Experience</a></li>
       <li><a href="#about">About</a></li>
@@ -1042,7 +1108,7 @@
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Architectural facade at dusk" loading="eager">
+      <img src="assets/symphony-manors/manors-10.png" alt="Symphony Manors at dusk" loading="eager">
     </div>
     <div class="hero__grain"></div>
     <div class="hero__overlay"></div>
@@ -1071,7 +1137,7 @@
     <div class="walkthrough__intro container fade-in">
       <p class="section-label">Experience</p>
       <h2 class="section-title">Walk Through the Vision</h2>
-      <p>Five moments. One continuous passage through material, light, and permanence.</p>
+      <p>Five moments at Symphony Manors — one continuous passage through material, light, and permanence.</p>
     </div>
 
     <div class="walkthrough__pin" id="walkthroughPin">
@@ -1079,57 +1145,57 @@
         <div class="walkthrough__track" id="walkthroughTrack">
           <article class="walkthrough__panel">
             <div class="walkthrough__panel-bg">
-              <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1600&q=80" alt="Exterior facade" loading="lazy">
+              <img src="assets/symphony-manors/manors-1.png" alt="Symphony Manors exterior — units A1 to A2" loading="lazy">
             </div>
             <div class="walkthrough__panel-overlay"></div>
             <div class="walkthrough__panel-content">
               <p class="walkthrough__number">01 — The Structure</p>
               <h3 class="walkthrough__panel-title">Exterior Facade</h3>
-              <p class="walkthrough__panel-desc">Concrete, glass, and steel composed with restraint. The first impression is permanence — form that holds against time and weather alike.</p>
+              <p class="walkthrough__panel-desc">Contemporary forms in grey, glass, and timber. At Symphony Manors, the facade sets the tone — permanence expressed through clean geometry and material honesty.</p>
             </div>
           </article>
           <article class="walkthrough__panel">
             <div class="walkthrough__panel-bg">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80" alt="Entrance foyer" loading="lazy">
+              <img src="assets/symphony-manors/manors-8.png" alt="Symphony Manors unit C1 entrance" loading="lazy">
             </div>
             <div class="walkthrough__panel-overlay"></div>
             <div class="walkthrough__panel-content">
               <p class="walkthrough__number">02 — The Threshold</p>
-              <h3 class="walkthrough__panel-title">Entrance &amp; Foyer</h3>
-              <p class="walkthrough__panel-desc">The moment of arrival. Height, silence, and controlled light signal that what follows was considered before a single wall was raised.</p>
+              <h3 class="walkthrough__panel-title">Entrance &amp; Arrival</h3>
+              <p class="walkthrough__panel-desc">The moment you pull in. Paved drive, controlled lighting, and a private entrance that signals this was considered before a single wall was raised.</p>
             </div>
           </article>
           <article class="walkthrough__panel">
             <div class="walkthrough__panel-bg">
-              <img src="https://images.unsplash.com/photo-1600210492486-724fe644c964?w=1600&q=80" alt="Living spaces" loading="lazy">
+              <img src="assets/symphony-manors/manors-9.png" alt="Symphony Manors unit C2" loading="lazy">
             </div>
             <div class="walkthrough__panel-overlay"></div>
             <div class="walkthrough__panel-content">
               <p class="walkthrough__number">03 — Living Spaces</p>
               <h3 class="walkthrough__panel-title">Interiors &amp; Light</h3>
-              <p class="walkthrough__panel-desc">Proportion governs every room. Natural light enters on its own terms — measured, directed, never accidental.</p>
+              <p class="walkthrough__panel-desc">Generous glazing, balcony proportion, and warm interior glow. Natural light enters on its own terms — measured, directed, never accidental.</p>
             </div>
           </article>
           <article class="walkthrough__panel">
             <div class="walkthrough__panel-bg">
-              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=80" alt="Material details" loading="lazy">
+              <img src="assets/symphony-manors/manors-2.png" alt="Symphony Manors at twilight" loading="lazy">
             </div>
             <div class="walkthrough__panel-overlay"></div>
             <div class="walkthrough__panel-content">
               <p class="walkthrough__number">04 — The Details</p>
               <h3 class="walkthrough__panel-title">Finishes &amp; Craft</h3>
-              <p class="walkthrough__panel-desc">Stone, timber, brass — each surface selected for tactile honesty. Details are not decoration. They are evidence of intent.</p>
+              <p class="walkthrough__panel-desc">Stone cladding, timber accents, and precision lighting — each surface selected for tactile honesty. Details are evidence of intent, not decoration.</p>
             </div>
           </article>
           <article class="walkthrough__panel">
             <div class="walkthrough__panel-bg">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80" alt="Landscape view" loading="lazy">
+              <img src="assets/symphony-manors/manors-4.png" alt="Symphony Manors aerial view with pools" loading="lazy">
             </div>
             <div class="walkthrough__panel-overlay"></div>
             <div class="walkthrough__panel-content">
               <p class="walkthrough__number">05 — The View</p>
               <h3 class="walkthrough__panel-title">Landscape &amp; Surroundings</h3>
-              <p class="walkthrough__panel-desc">The skyline, the lagoon, the garden court — context completes the work. Every BlackCountry property is rooted in its Nigerian setting.</p>
+              <p class="walkthrough__panel-desc">Private pools, manicured grounds, and gated serenity. Context completes the work — Symphony Manors rooted in its Nigerian setting.</p>
             </div>
           </article>
         </div>
@@ -1144,6 +1210,29 @@
     </div>
   </section>
 
+  <!-- Symphony Manors Gallery -->
+  <section class="symphony" id="symphony">
+    <div class="container">
+      <div class="symphony__header fade-in">
+        <p class="section-label">Featured Development</p>
+        <h2 class="section-title">Symphony Manors</h2>
+        <p>A curated enclave of contemporary villas — units A1 through C2, private pools, and landscaped grounds. Designed by aux Architecture for BlackCountry Real Estate.</p>
+      </div>
+      <div class="symphony__gallery fade-in">
+        <img src="assets/symphony-manors/manors-1.png" alt="Symphony Manors street view" loading="lazy">
+        <img src="assets/symphony-manors/manors-2.png" alt="Symphony Manors at twilight" loading="lazy">
+        <img src="assets/symphony-manors/manors-3.png" alt="Symphony Manors aerial with city skyline" loading="lazy">
+        <img src="assets/symphony-manors/manors-4.png" alt="Symphony Manors bird's-eye view with pools" loading="lazy">
+        <img src="assets/symphony-manors/manors-5.png" alt="Symphony Manors development overview" loading="lazy">
+        <img src="assets/symphony-manors/manors-6.png" alt="Symphony Manors aerial perspective" loading="lazy">
+        <img src="assets/symphony-manors/manors-7.png" alt="Symphony Manors A2 unit" loading="lazy">
+        <img src="assets/symphony-manors/manors-8.png" alt="Symphony Manors C1 unit" loading="lazy">
+        <img src="assets/symphony-manors/manors-9.png" alt="Symphony Manors C2 unit" loading="lazy">
+        <img src="assets/symphony-manors/manors-10.png" alt="Symphony Manors at dusk" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <!-- Properties -->
   <section class="properties" id="properties">
     <div class="container">
@@ -1154,7 +1243,7 @@
       <div class="properties__grid">
         <article class="property-card fade-in">
           <div class="property-card__image">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80" alt="Symphony Manors">
+            <img src="assets/symphony-manors/manors-5.png" alt="Symphony Manors">
           </div>
           <div class="property-card__overlay">
             <p class="property-card__location">Ikoyi, Lagos</p>
@@ -1238,7 +1327,7 @@
   <section class="about" id="about">
     <div class="container about__grid">
       <div class="about__image fade-in">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Architectural precision" loading="lazy">
+        <img src="assets/symphony-manors/manors-6.png" alt="Symphony Manors development" loading="lazy">
       </div>
       <div class="about__content fade-in">
         <p class="section-label">Philosophy</p>
@@ -1326,7 +1415,8 @@
           <span class="footer__division">A <a href="https://www.blackcountry.africa" target="_blank" rel="noopener noreferrer">BlackCountry Holding</a> Division</span>
         </div>
         <ul class="footer__nav">
-          <li><a href="#properties">Properties</a></li>
+          <li><a href="#symphony">Symphony Manors</a></li>
+      <li><a href="#properties">Properties</a></li>
           <li><a href="#walkthrough">Experience</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
